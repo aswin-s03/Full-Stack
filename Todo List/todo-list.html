@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo List</title>
+        <link rel="stylesheet" href="todo-list.css">
+    </head>
+    <body>
+        <p class="title">Todo List</p>
+        <div class="todo-input-grid">
+            <input class="js-todo-input todo-input" placeholder="Todo name" required>
+            <input class="js-due-date-input due-date-input" onkeydown="
+                if(event.key === 'Enter') {
+                    addTodo();
+                }
+            " type="date" required>
+            <button class="add-todo-button js-add-button">Add</button>
+            <button class="clear-todos-button js-clear-button">Clear</button>
+        </div>
+
+        <div class="js-todo-list todo-grid"></div>
+
+        <script src="todo-list.js"></script>
+    </body>
+</html>
